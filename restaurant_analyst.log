@@ -1,0 +1,330 @@
+2023-04-04 20:40:00,450 INFO     Running obtain_query, attempt number 1
+2023-04-04 20:40:00,450 INFO     Using cached query prompt
+2023-04-04 20:40:00,450 INFO     Running load_data, attempt number 1
+2023-04-04 20:40:00,451 INFO     Running obtain_query, attempt number 2
+2023-04-04 20:40:00,451 INFO     Using cached query prompt
+2023-04-04 20:40:00,451 INFO     Running load_data, attempt number 2
+2023-04-04 20:40:00,451 INFO     Running obtain_query, attempt number 3
+2023-04-04 20:40:00,451 INFO     Using cached query prompt
+2023-04-04 20:40:00,452 INFO     Running load_data, attempt number 3
+2023-04-04 20:40:50,524 INFO     Running obtain_query, attempt number 1
+2023-04-04 20:40:50,524 INFO     Using cached query prompt
+2023-04-04 20:40:50,525 INFO     Running load_data, attempt number 1
+2023-04-04 20:40:50,525 INFO     Running obtain_query, attempt number 2
+2023-04-04 20:40:53,085 INFO     Obtained query prompt
+2023-04-04 20:40:53,085 INFO     Running load_data, attempt number 2
+2023-04-04 20:40:53,085 INFO     Running obtain_query, attempt number 3
+2023-04-04 20:40:55,412 INFO     Obtained query prompt
+2023-04-04 20:40:55,413 INFO     Running load_data, attempt number 3
+2023-04-04 20:42:48,949 INFO     Running obtain_query, attempt number 1
+2023-04-04 20:42:48,950 INFO     Using cached query prompt
+2023-04-04 20:42:48,950 INFO     Running load_data, attempt number 1
+2023-04-04 20:42:48,950 INFO     Running obtain_query, attempt number 2
+2023-04-04 20:42:50,613 INFO     Obtained query prompt
+2023-04-04 20:42:50,613 INFO     Running load_data, attempt number 2
+2023-04-04 20:42:50,613 INFO     Running obtain_query, attempt number 3
+2023-04-04 20:42:52,560 INFO     Obtained query prompt
+2023-04-04 20:42:52,561 INFO     Running load_data, attempt number 3
+2023-04-04 20:43:43,588 INFO     Running obtain_query, attempt number 1
+2023-04-04 20:43:43,589 INFO     Using cached query prompt
+2023-04-04 20:43:43,589 INFO     Running load_data, attempt number 1
+2023-04-04 20:43:43,589 INFO     Running obtain_query, attempt number 2
+2023-04-04 20:43:45,603 INFO     Obtained query prompt
+2023-04-04 20:43:45,604 INFO     Running load_data, attempt number 2
+2023-04-04 20:43:45,604 INFO     Running obtain_query, attempt number 3
+2023-04-04 20:43:47,369 INFO     Obtained query prompt
+2023-04-04 20:43:47,369 INFO     Running load_data, attempt number 3
+2023-04-04 20:44:54,898 INFO     Running obtain_query, attempt number 1
+2023-04-04 20:44:54,898 INFO     Using cached query prompt
+2023-04-04 20:44:54,899 INFO     Running load_data, attempt number 1
+2023-04-04 20:44:54,899 INFO     Running obtain_query, attempt number 2
+2023-04-04 20:44:56,766 INFO     Obtained query prompt
+2023-04-04 20:44:56,766 INFO     Running load_data, attempt number 2
+2023-04-04 20:44:56,766 INFO     Running obtain_query, attempt number 3
+2023-04-04 20:44:58,728 INFO     Obtained query prompt
+2023-04-04 20:44:58,728 INFO     Running load_data, attempt number 3
+2023-04-04 20:47:24,215 INFO     Running obtain_query, attempt number 1
+2023-04-04 20:47:24,215 INFO     Using cached query prompt
+2023-04-04 20:47:24,216 INFO     Running load_data, attempt number 1
+2023-04-04 20:47:24,217 WARNING  Error in running query: name 'question' is not defined
+2023-04-04 20:47:24,217 INFO     Running obtain_query, attempt number 2
+2023-04-04 20:47:26,016 INFO     Obtained query prompt
+2023-04-04 20:47:26,018 INFO     Running load_data, attempt number 2
+2023-04-04 20:47:26,018 WARNING  Error in running query: name 'question' is not defined
+2023-04-04 20:47:26,018 INFO     Running obtain_query, attempt number 3
+2023-04-04 20:47:28,530 INFO     Obtained query prompt
+2023-04-04 20:47:28,530 INFO     Running load_data, attempt number 3
+2023-04-04 20:47:28,531 WARNING  Error in running query: name 'question' is not defined
+2023-04-04 20:47:49,139 INFO     Running obtain_query, attempt number 1
+2023-04-04 20:47:49,140 INFO     Using cached query prompt
+2023-04-04 20:47:49,140 INFO     Running load_data, attempt number 1
+2023-04-04 20:47:49,141 WARNING  Error in running query: name 'question' is not defined
+2023-04-04 20:47:49,141 INFO     Running obtain_query, attempt number 2
+2023-04-04 20:47:50,780 INFO     Obtained query prompt
+2023-04-04 20:47:50,781 INFO     Running load_data, attempt number 2
+2023-04-04 20:47:50,784 INFO     Loaded data
+2023-04-04 20:48:11,429 INFO     Running obtain_query, attempt number 1
+2023-04-04 20:48:11,429 INFO     Using cached query prompt
+2023-04-04 20:48:11,430 INFO     Running load_data, attempt number 1
+2023-04-04 20:48:11,430 WARNING  Error in running query!
+2023-04-04 20:48:11,431 INFO     Running obtain_query, attempt number 2
+2023-04-04 20:48:13,075 INFO     Obtained query prompt
+2023-04-04 20:48:13,075 INFO     Running load_data, attempt number 2
+2023-04-04 20:48:13,079 INFO     Loaded data
+2023-04-04 20:48:13,079 INFO     Running obtain_interpretation
+2023-04-04 20:49:00,594 INFO     Running obtain_query, attempt number 1
+2023-04-04 20:49:00,594 INFO     Using cached query prompt
+2023-04-04 20:49:00,595 INFO     Running load_data, attempt number 1
+2023-04-04 20:49:00,595 INFO     Using cached data
+2023-04-04 20:49:00,595 INFO     Running obtain_interpretation
+2023-04-04 20:49:02,830 INFO     Obtained interpretation
+2023-04-04 20:49:20,478 INFO     Running obtain_query, attempt number 1
+2023-04-04 20:49:20,479 INFO     Using cached query prompt
+2023-04-04 20:49:20,479 INFO     Running load_data, attempt number 1
+2023-04-04 20:49:20,480 INFO     Using cached data
+2023-04-04 20:49:20,480 INFO     Running obtain_interpretation
+2023-04-04 20:49:23,012 INFO     Obtained interpretation
+2023-04-04 20:49:52,397 INFO     New question: do we have any birthdays coming up this month?
+2023-04-04 20:49:52,397 INFO     Running obtain_query, attempt number 1
+2023-04-04 20:49:52,398 INFO     Using cached query prompt
+2023-04-04 20:49:52,398 INFO     Running load_data, attempt number 1
+2023-04-04 20:49:52,398 INFO     Using cached data
+2023-04-04 20:49:52,398 INFO     Running obtain_interpretation
+2023-04-04 20:49:54,594 INFO     Obtained interpretation
+2023-04-04 20:50:23,691 INFO     New question: do we have any birthdays coming up this month?
+2023-04-04 20:50:23,691 INFO     Running obtain_query, attempt number 1
+2023-04-04 20:50:23,692 INFO     Using cached query prompt
+2023-04-04 20:50:23,692 INFO     Running load_data, attempt number 1
+2023-04-04 20:50:23,692 INFO     Using cached data
+2023-04-04 20:50:23,692 INFO     Running obtain_interpretation
+2023-04-04 20:50:25,688 INFO     Obtained interpretation
+2023-04-04 20:53:05,133 INFO     New question: do we have any birthdays coming up this month?
+2023-04-04 20:53:05,134 INFO     Running obtain_query, attempt number 1
+2023-04-04 20:53:05,134 INFO     Using cached query prompt
+2023-04-04 20:53:05,135 INFO     Running load_data, attempt number 1
+2023-04-04 20:53:05,135 INFO     Using cached data
+2023-04-04 20:53:05,135 INFO     Running obtain_interpretation
+2023-04-04 20:53:07,988 INFO     Obtained interpretation
+2023-04-04 20:53:23,650 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-04 20:53:23,677 WARNING  No such comm: 5549c15d-34fb-4a8b-add0-d3b6b1187177
+2023-04-04 22:46:16,510 INFO     New question: do we have any birthdays coming up this month?
+2023-04-04 22:46:16,511 INFO     Running obtain_query, attempt number 1
+2023-04-04 22:46:16,511 INFO     Using cached query prompt
+2023-04-04 22:46:16,511 INFO     Running load_data, attempt number 1
+2023-04-04 22:46:16,511 INFO     Using cached data
+2023-04-04 22:46:16,511 INFO     Running obtain_interpretation
+2023-04-04 22:46:16,511 INFO     Using cached interpretation
+2023-04-04 22:46:22,390 INFO     New question: do we have any birthdays coming up this month?
+2023-04-04 22:46:22,390 INFO     Running obtain_query, attempt number 1
+2023-04-04 22:46:22,390 INFO     Using cached query prompt
+2023-04-04 22:46:22,391 INFO     Running load_data, attempt number 1
+2023-04-04 22:46:22,391 INFO     Using cached data
+2023-04-04 22:46:22,391 INFO     Running obtain_interpretation
+2023-04-04 22:46:22,391 INFO     Using cached interpretation
+2023-04-04 22:46:29,068 INFO     New question: Do we have any birthdays coming up this month?
+2023-04-04 22:46:29,068 INFO     Running obtain_query, attempt number 1
+2023-04-04 22:46:43,763 INFO     New question: Do we have any birthdays coming up this month?
+2023-04-04 22:46:43,764 INFO     Running obtain_query, attempt number 1
+2023-04-04 22:46:46,698 INFO     Obtained query prompt
+2023-04-04 22:46:46,699 INFO     Running load_data, attempt number 1
+2023-04-04 22:46:46,702 INFO     Loaded data
+2023-04-04 22:46:46,702 INFO     Running obtain_interpretation
+2023-04-04 22:46:47,821 INFO     Obtained interpretation
+2023-04-04 22:49:05,572 INFO     New question: How many employees left the company this year?
+2023-04-04 22:49:05,573 INFO     Running obtain_query, attempt number 1
+2023-04-04 22:49:07,291 INFO     Obtained query prompt
+2023-04-04 22:49:07,291 INFO     Running load_data, attempt number 1
+2023-04-04 22:49:07,294 INFO     Loaded data
+2023-04-04 22:49:07,294 INFO     Running obtain_interpretation
+2023-04-04 22:49:08,212 INFO     Obtained interpretation
+2023-04-04 22:52:32,189 INFO     New question: how long has our current manager been with us
+2023-04-04 22:52:32,189 INFO     Running obtain_query, attempt number 1
+2023-04-04 22:52:34,550 INFO     Obtained query prompt
+2023-04-04 22:52:34,551 INFO     Running load_data, attempt number 1
+2023-04-04 22:52:34,554 INFO     Loaded data
+2023-04-04 22:52:34,554 INFO     Running obtain_interpretation
+2023-04-04 22:52:35,251 INFO     Obtained interpretation
+2023-04-04 22:53:53,740 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-04 22:53:53,742 WARNING  No such comm: 7d8d9752-884b-4018-9eea-c61be170e2b6
+2023-04-05 11:08:55,840 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-05 11:08:55,843 WARNING  No such comm: 0282c09a-1ef6-46f9-b8fc-6e87c858350f
+2023-04-05 13:32:29,619 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-05 13:32:29,621 WARNING  No such comm: a97c7616-5ae5-465b-a2b7-01a39a500cc4
+2023-04-05 13:56:31,935 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-05 13:56:31,941 WARNING  No such comm: 7d5e4166-d515-4b94-9a23-0ac13e192655
+2023-04-05 13:57:09,028 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-05 13:57:09,031 WARNING  No such comm: 52a34d7a-0f76-4420-9c2e-b40552590ca2
+2023-04-05 18:07:54,174 INFO     New question: What was the most popular menu item yesterday?
+2023-04-05 18:07:54,175 INFO     Running obtain_query, attempt number 1
+2023-04-05 18:08:02,015 INFO     New question: What was the most popular menu item yesterday?
+2023-04-05 18:08:02,016 INFO     Running obtain_query, attempt number 1
+2023-04-05 18:08:05,300 INFO     Obtained query prompt
+2023-04-05 18:08:05,300 INFO     Running load_data, attempt number 1
+2023-04-05 18:08:05,325 INFO     Loaded data
+2023-04-05 18:08:05,326 INFO     Running obtain_interpretation
+2023-04-05 18:08:06,091 INFO     Obtained interpretation
+2023-04-05 18:08:18,651 INFO     New question: What was the most popular menu item last week?
+2023-04-05 18:08:18,652 INFO     Running obtain_query, attempt number 1
+2023-04-05 18:08:21,636 INFO     Obtained query prompt
+2023-04-05 18:08:21,636 INFO     Running load_data, attempt number 1
+2023-04-05 18:08:21,662 INFO     Loaded data
+2023-04-05 18:08:21,662 INFO     Running obtain_interpretation
+2023-04-05 18:08:22,611 INFO     Obtained interpretation
+2023-04-05 18:18:56,242 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-05 18:18:56,243 WARNING  No such comm: 41453fa4-b854-4cef-9163-a59dd670000d
+2023-04-05 18:32:03,950 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-05 18:32:03,951 WARNING  No such comm: 1100238b-ccf5-4b0c-8ba1-19f618facc3e
+2023-04-05 19:12:46,220 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-05 19:12:46,223 WARNING  No such comm: 1fcf6616-aab4-48da-8d1f-6b22ebd2b9ed
+2023-04-05 19:30:12,222 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-05 19:30:12,224 WARNING  No such comm: 1809b928-9162-4df6-8c90-7c0d3df7602b
+2023-04-06 10:45:47,500 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-06 10:45:47,502 WARNING  No such comm: 26eea5eb-cfac-488f-97f7-808a740138a4
+2023-04-06 12:37:52,114 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-06 12:37:52,116 WARNING  No such comm: fb4fa750-a49b-47ce-952a-dd49ceb800b8
+2023-04-06 12:51:46,626 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-06 12:51:46,638 WARNING  No such comm: 2e03ca05-b340-48ae-9d5b-f3242ed59f28
+2023-04-06 13:10:34,339 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-06 13:10:34,341 WARNING  No such comm: 3e8a8ef8-2fe0-42b9-97e1-857e53a996c5
+2023-04-06 13:56:31,316 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-06 13:56:31,320 WARNING  No such comm: 6068e845-a958-4523-bb82-f15d686fe01d
+2023-04-06 14:32:23,590 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-06 14:32:23,592 WARNING  No such comm: 90df7d4c-cfb5-4ebc-9639-fa94315693bb
+2023-04-06 16:02:01,411 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-06 16:02:01,412 WARNING  No such comm: 73ac3f24-5414-4d7c-a760-86f4add05945
+2023-04-06 16:02:26,276 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-06 16:02:26,279 WARNING  No such comm: 3d6f5909-1848-415e-9d3d-e1fd5e7c4199
+2023-04-06 16:49:00,160 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-06 16:49:00,162 WARNING  No such comm: fd64e452-6210-4765-9c5f-da775ed0dc95
+2023-04-06 20:32:05,659 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-06 20:32:05,668 WARNING  No such comm: f6f6c2b1-d5ad-431f-8ef3-f98d4b32e504
+2023-04-06 21:04:18,664 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-06 21:04:18,667 WARNING  No such comm: 534c6499-197e-47ef-bb0b-caff13db5a45
+2023-04-07 09:02:48,869 INFO     New question: What was employee turnover last year?
+2023-04-07 09:02:48,870 INFO     Running obtain_query, attempt number 1
+2023-04-07 09:02:50,952 INFO     Obtained query prompt
+2023-04-07 09:02:50,953 INFO     Running load_data, attempt number 1
+2023-04-07 09:02:50,957 INFO     Loaded data
+2023-04-07 09:02:50,957 INFO     Running obtain_interpretation
+2023-04-07 09:02:51,767 INFO     Obtained interpretation
+2023-04-07 17:31:24,375 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-07 17:31:24,376 WARNING  No such comm: c815dde9-d77e-4783-aade-d58cef3c9758
+2023-04-07 17:51:35,353 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-07 17:51:35,356 WARNING  No such comm: dcefd1f4-fd24-446e-afbf-5c8469010a9d
+2023-04-07 18:17:40,428 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-07 18:17:40,431 WARNING  No such comm: 15098cd4-7b78-498b-98c7-1cda9e9c3e35
+2023-04-08 12:43:26,459 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-08 12:43:26,461 WARNING  No such comm: 90c52e12-7c72-44a6-9154-95a9081818b4
+2023-04-08 19:02:45,781 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-08 19:02:45,784 WARNING  No such comm: c598a9d9-f760-4e50-91d8-eeb3b94a9397
+2023-04-08 23:29:10,629 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-08 23:29:10,631 WARNING  No such comm: 47221917-bbd2-4dc7-9df5-734e71025f84
+2023-04-08 23:33:38,249 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-08 23:33:38,251 WARNING  No such comm: 4206eb9b-076a-400c-8a84-fe99050af610
+2023-04-09 09:20:17,962 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-09 09:20:17,964 WARNING  No such comm: 05267288-9d43-4e16-9aaf-1adc88a2bac9
+2023-04-09 12:32:59,485 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-09 12:32:59,489 WARNING  No such comm: 22a34232-1f2d-4333-a4f2-b123b2ea9ba7
+2023-04-09 12:57:48,355 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-09 12:57:48,357 WARNING  No such comm: 77a99790-be9c-4e16-a878-25376fc5ae8e
+2023-04-09 13:01:11,567 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-09 13:01:11,570 WARNING  No such comm: c607a14a-b3b0-4928-8a97-9e1a228add00
+2023-04-09 13:20:53,362 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-09 13:20:53,366 WARNING  No such comm: 44fae837-1502-4b0b-95ae-5d25237c8e1b
+2023-04-09 14:09:23,988 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-09 14:09:23,990 WARNING  No such comm: ae8f787f-d64b-4c86-a0a3-90be90eefaae
+2023-04-09 14:33:33,247 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-09 14:33:33,250 WARNING  No such comm: fcc6fe38-96bc-4b32-8f2c-c69f50cf4dd7
+2023-04-09 17:27:03,652 INFO     New question: Which menu item has been gaining in popularity?
+2023-04-09 17:27:03,653 INFO     Running obtain_query, attempt number 1
+2023-04-09 17:27:05,846 INFO     Obtained query prompt
+2023-04-09 17:27:05,846 INFO     Running load_data, attempt number 1
+2023-04-09 17:27:05,934 INFO     Loaded data
+2023-04-09 17:27:05,934 INFO     Running obtain_interpretation
+2023-04-09 17:27:06,869 INFO     Obtained interpretation
+2023-04-09 17:27:40,233 INFO     New question: What's the most popular main course?
+2023-04-09 17:27:40,234 INFO     Running obtain_query, attempt number 1
+2023-04-09 17:27:42,751 INFO     Obtained query prompt
+2023-04-09 17:27:42,751 INFO     Running load_data, attempt number 1
+2023-04-09 17:27:42,755 INFO     Loaded data
+2023-04-09 17:27:42,755 INFO     Running obtain_interpretation
+2023-04-09 17:27:44,698 INFO     Obtained interpretation
+2023-04-09 18:40:25,402 INFO     New question: What's the most popular main course?
+2023-04-09 18:40:25,403 INFO     Running obtain_query, attempt number 1
+2023-04-09 18:40:25,403 INFO     Using cached query prompt
+2023-04-09 18:40:25,404 INFO     Running load_data, attempt number 1
+2023-04-09 18:40:25,404 INFO     Using cached data
+2023-04-09 18:40:25,404 INFO     Running obtain_interpretation
+2023-04-09 18:40:25,404 INFO     Using cached interpretation
+2023-04-09 18:40:31,319 INFO     New question: What's our most popular main course?
+2023-04-09 18:40:31,319 INFO     Running obtain_query, attempt number 1
+2023-04-09 18:40:33,310 INFO     Obtained query prompt
+2023-04-09 18:40:33,310 INFO     Running load_data, attempt number 1
+2023-04-09 18:40:33,420 INFO     Loaded data
+2023-04-09 18:40:33,420 INFO     Running obtain_interpretation
+2023-04-09 18:40:34,225 INFO     Obtained interpretation
+2023-04-09 19:22:32,161 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-09 19:22:32,164 WARNING  No such comm: a424493e-7ac0-447a-a780-9ead6b14218a
+2023-04-10 00:53:44,064 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-10 00:53:44,065 WARNING  No such comm: a356fefd-23d8-43cc-855c-5f63ebae9d0f
+2023-04-10 09:53:55,143 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-10 09:53:55,146 WARNING  No such comm: 5e43d6b7-5b51-4d5d-8289-0623f5ebf59d
+2023-04-10 15:30:47,036 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-10 15:30:47,041 WARNING  No such comm: 3635e4b6-fd10-438e-995f-fcd8d1e25cbf
+2023-04-10 21:16:16,523 ERROR    No such comm target registered: jupyter.widget.control
+2023-04-10 21:16:16,525 WARNING  No such comm: ce664057-f812-4b6a-aeb1-bddd32f07d86
+2023-04-10 21:34:47,138 INFO     New question: What is the average salary of employees?
+2023-04-10 21:34:47,139 INFO     Running obtain_query, attempt number 1
+2023-04-10 21:38:36,086 INFO     New question: What is the average salary of employees?
+2023-04-10 21:38:36,087 INFO     Running obtain_query, attempt number 1
+2023-04-10 21:38:36,832 INFO     Obtained query prompt
+2023-04-10 21:38:36,832 INFO     Running load_data, attempt number 1
+2023-04-10 21:38:36,832 WARNING  Error in running query!
+2023-04-10 21:38:36,832 INFO     Running obtain_query, attempt number 2
+2023-04-10 21:38:37,832 INFO     Obtained query prompt
+2023-04-10 21:38:37,832 INFO     Running load_data, attempt number 2
+2023-04-10 21:38:37,832 WARNING  Error in running query!
+2023-04-10 21:38:37,832 INFO     Running obtain_query, attempt number 3
+2023-04-10 21:38:38,541 INFO     Obtained query prompt
+2023-04-10 21:38:38,541 INFO     Running load_data, attempt number 3
+2023-04-10 21:38:38,541 WARNING  Error in running query!
+2023-04-10 21:39:55,505 INFO     New question: What is the average salary of employees?
+2023-04-10 21:39:55,505 INFO     Running obtain_query, attempt number 1
+2023-04-10 21:39:56,246 INFO     Obtained query prompt
+2023-04-10 21:39:56,247 INFO     Running load_data, attempt number 1
+2023-04-10 21:39:56,248 WARNING  Error in running query!
+2023-04-10 21:39:56,248 INFO     Running obtain_query, attempt number 2
+2023-04-10 21:39:56,960 INFO     Obtained query prompt
+2023-04-10 21:39:56,960 INFO     Running load_data, attempt number 2
+2023-04-10 21:39:56,960 WARNING  Error in running query!
+2023-04-10 21:39:56,960 INFO     Running obtain_query, attempt number 3
+2023-04-10 21:39:57,624 INFO     Obtained query prompt
+2023-04-10 21:39:57,624 INFO     Running load_data, attempt number 3
+2023-04-10 21:39:57,625 WARNING  Error in running query!
+2023-04-10 22:02:17,979 INFO     New question: Who worked the most hours last month?
+2023-04-10 22:02:17,980 INFO     Running obtain_query, attempt number 1
+2023-04-10 22:02:21,288 INFO     Obtained query prompt
+2023-04-10 22:02:21,288 INFO     Running load_data, attempt number 1
+2023-04-10 22:02:21,288 WARNING  Error in running query!
+2023-04-10 22:02:21,289 INFO     Running obtain_query, attempt number 2
+2023-04-10 22:02:24,681 INFO     Obtained query prompt
+2023-04-10 22:02:24,682 INFO     Running load_data, attempt number 2
+2023-04-10 22:02:24,682 WARNING  Error in running query!
+2023-04-10 22:02:24,682 INFO     Running obtain_query, attempt number 3
+2023-04-10 22:02:27,441 INFO     Obtained query prompt
+2023-04-10 22:02:27,441 INFO     Running load_data, attempt number 3
+2023-04-10 22:02:27,445 INFO     Loaded data
+2023-04-10 22:02:52,148 INFO     New question: Who worked the most hours last month?
+2023-04-10 22:02:52,149 INFO     Running obtain_query, attempt number 1
+2023-04-10 22:02:56,616 INFO     Obtained query prompt
+2023-04-10 22:02:56,616 INFO     Running load_data, attempt number 1
+2023-04-10 22:02:56,621 INFO     Loaded data
+2023-04-10 22:02:56,621 INFO     Running obtain_interpretation
+2023-04-10 22:02:57,739 INFO     Obtained interpretation
+2023-04-10 22:04:19,771 INFO     New question: Tell me how much each employee worked last month
+2023-04-10 22:04:19,771 INFO     Running obtain_query, attempt number 1
+2023-04-10 22:04:23,354 INFO     Obtained query prompt
+2023-04-10 22:04:23,355 INFO     Running load_data, attempt number 1
+2023-04-10 22:04:23,356 INFO     Loaded data
+2023-04-10 22:04:23,356 INFO     Running obtain_interpretation
+2023-04-10 22:04:24,264 INFO     Obtained interpretation
