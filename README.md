@@ -2,7 +2,7 @@
 
 ### Steps to set up:
 
-1. Create an .env file. Add your OPENAI key like: ```OPENAI_KEY=<your key here>```
+1. Create an ```.env``` file. Add your OPENAI key like: ```OPENAI_KEY=<your key here>```
 2. run ```python pip install -r requirements.txt ```
 3. see ```main.ipynb``` for a code sample
 
