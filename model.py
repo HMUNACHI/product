@@ -13,7 +13,8 @@ openai.api_key = os.getenv('OPENAI_KEY')
 
 class RestaurantModel:
     
-    def __init__(self, conn):
+    def __init__(self, conn, secret_protected=False):
+        self.secret_protected = secret_protected
         self.cache = pickle.load(open('cache.pkl', 'rb'))
         self.conn = conn
         self._generate_database_map(
@@ -143,7 +144,7 @@ class RestaurantModel:
             logging.info('Obtained interpretation')
         return interpretation
     
-    def ask(self, question):
+    def ask(self, question, secret=None):
         '''
         Method to obtain the interpretation of a given question.
 
@@ -159,7 +160,9 @@ class RestaurantModel:
         The obtained interpretation is then cached for future use and returned.
         - 
         '''
-        
+        if self.secret_protected and secret != os.getenv('MODEL_SECRET'):
+            # raise ValueError('Incorrect secret provided!')
+            return 'Incorrect secret provided!'
         self.attempt_number = 1 # this tracks how many tries we gave ChatGPT to generate the correct query.
         query_compiles = False # have we obtained an executable query from ChatGPT?
         query_returns_data = False # does the query return any data?
@@ -178,7 +181,7 @@ class RestaurantModel:
             try:
                 df = self.load_data(query)
             except Exception as e:
-                logging.warning(f'Error in running query!')
+                logging.warning(f'Error in running query! ({e}))')
                 self.attempt_number += 1 
                 continue
             else:
@@ -201,4 +204,4 @@ class RestaurantModel:
             # step 4: persist the cache
             pickle.dump(self.cache, open('cache.pkl', 'wb'))
 
-            print(interpretation)
+            return interpretation
