@@ -1,6 +1,7 @@
 .git*
 .env
 .venv
+*.log
 
 __*
 .DS_STORE
