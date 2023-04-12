@@ -3,6 +3,8 @@ import logging
 import pandas as pd
 import openai
 import os
+import re
+import sys
 
 from datetime import datetime
 from dotenv import load_dotenv
@@ -11,63 +13,102 @@ load_dotenv()
 
 openai.api_key = os.getenv('OPENAI_KEY')
 
+def get_all_tables(conn, db_type):
+    """
+    gets all tables from the database and returns them as a list
+    """
+    if db_type == 'sqlite':
+        all_tables = pd.read_sql('select tbl_name from sqlite_schema', conn)
+    elif db_type == 'postgresql':
+        all_tables = pd.read_sql("SELECT table_name FROM information_schema.tables where table_schema = 'public'", conn)
+    else:
+        raise ValueError('Unsupported database type!')
+    return all_tables.iloc[:, 0].to_list()
+
+def get_all_columns(conn, db_type, table_name):
+    """
+    gets all columns for a given table returns them as a DataFrame
+    """
+    if db_type == 'sqlite':
+        all_columns = pd.read_sql(f'PRAGMA table_info({table_name})', conn)
+    elif db_type == 'postgresql':
+        all_columns = pd.read_sql(f"SELECT column_name as name, data_type as type FROM information_schema.columns WHERE table_name = '{table_name}'", conn)
+    else:
+        raise ValueError('Unsupported database type!')
+    return all_columns
+
+def parse_postgres_error(text):
+    regex_pattern = r'\) (.*)\n'
+    matches = re.search(regex_pattern, text)
+    if matches:
+        return matches.group(1)
+    else:
+        return None
+
+def run_default_openai_completion(prompt):
+    response = openai.Completion.create(
+      model="text-davinci-003",
+      prompt=prompt,
+      temperature=0,
+      max_tokens=200,
+      top_p=1.0,
+      frequency_penalty=0.0,
+      presence_penalty=0.0,
+      stop=["#", ";"]
+    )
+    return response
+
+
 class RestaurantModel:
     
-    def __init__(self, conn, secret_protected=False):
+    def __init__(self, conn, db_type, secret_protected=False):
         self.secret_protected = secret_protected
+        self.db_type = db_type
         self.cache = pickle.load(open('cache.pkl', 'rb'))
         self.conn = conn
         self._generate_database_map(
             categorical_columns=['MENU_ITEMS.CATEGORY', 'EMPLOYEE_STATUS.POSITION'], 
-            version='categories'
         )
-        # self._generate_database_map(categorical_columns=[], version='datatypes')
         logging.basicConfig(
             filename='restaurant_analyst.log', 
             level=logging.INFO,
             format='%(asctime)s %(levelname)-8s %(message)s',
         )
 
-    def _generate_database_map(self, categorical_columns, version):
+    def _generate_database_map(self, categorical_columns=[]):
         '''
-        Generates a database map for the given SQLite connection.
+        Generates a database map for the given SQL connection.
 
-        This method generates a self.database_map attribute for the SQLite connection. 
+        This method generates a self.database_map attribute for the SQL connection. 
         It reads all tables from the database, retrieves the column information for each 
         table and formats it as "# <TABLE_NAME>(<COLUMN_NAME>:<COLUMN_TYPE>)".
         
         This information is then concatenated and saved as self.database_map attribute for future use.
         
-        We are still testing the best prompt to give ChatGPT – so it accepts different "version" inputs:
+        We are still testing the best prompt to give ChatGPT so it accepts different "version" inputs:
         - datatypes: each column will have its datatype next to it
         - categories: each categorical column will have a list of possible values
         '''
-        assert version in ['categories', 'datatypes'], 'Unsupported database map generator version!'
-        all_tables = pd.read_sql('select * from sqlite_schema', self.conn)
+        all_tables = get_all_tables(self.conn, self.db_type)
         schema_str = ''
-        for table in all_tables.tbl_name.to_list():
-            cols = pd.read_sql(f'PRAGMA table_info({table})', self.conn)
-            if version == 'datatypes':
-                cols_dict = cols[['name', 'type']].to_dict('records')
-                col_and_type = ', '.join([f"{x['name']}:{x['type']}" for x in cols_dict])
-                schema_str += f"# {table.upper()}({col_and_type})\n"
-            elif version == 'categories':
-                cols_and_cats_dict = {}
-                for c in cols.name:
-                    if f'{table.upper()}.{c.upper()}' in categorical_columns:
-                        cols_and_cats_dict[c] = pd.read_sql(f'SELECT DISTINCT {c} FROM {table}', self.conn)[c].to_list()
-                    else:
-                        cols_and_cats_dict[c] = []
-                col_and_cats_str = ', '.join([col if not cats else f'{col}:{cats}' for col, cats in cols_and_cats_dict.items()])
-                schema_str += f"# {table.upper()}({col_and_cats_str})\n"
+        for table in all_tables:
+            cols = get_all_columns(self.conn, self.db_type, table)
+            cols_and_cats_dict = {}
+            for c in cols.name:
+                if f'{table.upper()}.{c.upper()}' in categorical_columns:
+                    cols_and_cats_dict[c] = pd.read_sql(f'SELECT DISTINCT {c} FROM {table}', self.conn)[c].to_list()
+                else:
+                    cols_and_cats_dict[c] = []
+            col_and_cats_str = ', '.join([col if not cats else f'{col}:{cats}' for col, cats in cols_and_cats_dict.items()])
+            schema_str += f"# {table.upper()}({col_and_cats_str})\n"
         self.database_map = schema_str
 
     @property
     def query_prompt(self):
-        prompt = f'### SQLite tables, with their properties:\n#\n{self.database_map}#\n### A query to answer "{self.question}"\nSELECT'
+        prompt = f'### {self.db_type} tables, with their properties:\n#\n{self.database_map}#\n### A query to answer "{self.question}"\nSELECT'
         return prompt
 
-    def obtain_query(self):
+    def obtain_query(self, sql_compilation_error=None, last_run_query=None):
         '''
         Gets a SQL query from the openAI endpoint using the self.query_prompt attribute.
         
@@ -79,19 +120,16 @@ class RestaurantModel:
             query = self.cache[self.question]['query']
             logging.info('Using cached query prompt')
         else:
-            response = openai.Completion.create(
-              model="text-davinci-003",
-              prompt=self.query_prompt,
-              temperature=0,
-              max_tokens=200,
-              top_p=1.0,
-              frequency_penalty=0.0,
-              presence_penalty=0.0,
-              stop=["#", ";"]
-            )
+            if not sql_compilation_error and not last_run_query:
+                response = run_default_openai_completion(self.query_prompt)
+            else:
+                prompt = f'''### {self.db_type} query:\n# {last_run_query}\n### SQL error:\n# {sql_compilation_error}\n### Fix the error.\nSELECT'''
+                print(prompt)
+                response = run_default_openai_completion(prompt)
             query = 'SELECT' + response['choices'][0]['text'] 
             query = ' '.join(query.split())
-            logging.info('Obtained query prompt')
+            # logging.info('Obtained query!')
+            logging.info(f'Obtained query: {query}')
         return query
 
     def load_data(self, query):
@@ -129,16 +167,7 @@ class RestaurantModel:
             logging.info('Using cached interpretation')
         else:
             interpretation_prompt = self.generate_interpretation_prompt(df)
-            response = openai.Completion.create(
-              model="text-davinci-003",
-              prompt=interpretation_prompt,
-              temperature=0,
-              max_tokens=200,
-              top_p=1.0,
-              frequency_penalty=0.0,
-              presence_penalty=0.0,
-              stop=["#", ";"] # do we need this here?
-            )
+            response = run_default_openai_completion(interpretation_prompt)
             interpretation = 'The' + response['choices'][0]['text'] 
             self.cache[self.question]['interpretation'] = interpretation
             logging.info('Obtained interpretation')
@@ -164,6 +193,8 @@ class RestaurantModel:
             # raise ValueError('Incorrect secret provided!')
             return 'Incorrect secret provided!'
         self.attempt_number = 1 # this tracks how many tries we gave ChatGPT to generate the correct query.
+        sql_compilation_error = None # this tracks the error message from the SQL compilation error (none at first)
+        last_run_query = None # this tracks the last query that was run (none at first)
         query_compiles = False # have we obtained an executable query from ChatGPT?
         query_returns_data = False # does the query return any data?
         self.question = question
@@ -175,12 +206,15 @@ class RestaurantModel:
         
         while self.attempt_number <= 3 and not query_returns_data and not query_compiles:
             # step 1: obtain query
-            query = self.obtain_query()
+            query = self.obtain_query(sql_compilation_error=sql_compilation_error, last_run_query=last_run_query)
             
             # step 2: load DF
             try:
                 df = self.load_data(query)
             except Exception as e:
+                exc_type, exc_value, exc_traceback = sys.exc_info()
+                sql_compilation_error = parse_postgres_error(str(exc_value))
+                last_run_query = query
                 logging.warning(f'Error in running query! ({e}))')
                 self.attempt_number += 1 
                 continue
